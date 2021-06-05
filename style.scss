@@ -1,0 +1,269 @@
+@import "variables";
+
+* {
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.grid-col {
+    &-two {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+    }
+}
+
+.bg-light-grayish-blue {
+    background-color: $light-grayish-blue;
+}
+
+.bg-desaturated-blue {
+    background-color: $desaturated-blue;
+    color: white;
+}
+
+.font-wei-700 {
+    font-weight: 700;
+}
+
+.align-right {
+    position: absolute;
+    right: 0;
+}
+
+.flex-align-cen {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    padding: 2rem 0.5rem;
+    position: relative;
+
+    &__link {
+        text-decoration: none;
+        color: $very-dark-blue;
+    }
+}
+
+.footer {
+    background-color: $very-dark-blue;
+    color: white;
+
+    &__content {
+        margin-bottom: 1rem;
+    }
+
+    &__img {
+        filter: brightness(100);
+    }
+
+    &__link {
+        text-decoration: none;
+        color: white;
+        font-size: 1.3rem;
+
+        &:hover {
+            color: $desaturated-blue;
+        }
+    }
+}
+
+.wrapper {
+    padding: 4rem 2rem 8rem;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    &__header {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    &__title {
+        font-family: "Raleway", sans-serif;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: $very-dark-blue;
+
+        &--font-small {
+            font-size: 1.1rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.2rem;
+        color: $very-dark-blue;
+        margin: 1.5rem 0;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__desc {
+        margin: 1rem 0;
+        color: $desaturated-blue;
+    }
+
+    &--pad-bot-1 {
+        padding-bottom: 1em;
+    }
+}
+
+.card {
+    box-shadow: 0 0 10px $light-gray;
+    padding: 1em 2em;
+    margin: 2rem 1.5em;
+    color: $very-dark-blue;
+    max-width: 300px;
+    &__desc {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__img {
+        border-radius: 50%;
+        width: 40px;
+    }
+
+    &__avatar {
+        margin-left: 0.5rem;
+
+        &-name {
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        &-position {
+            font-size: 0.6rem;
+        }
+    }
+}
+
+.email-input {
+    border: 2px solid $very-dark-blue;
+    border-radius: 5px;
+    padding: 1em 0em 1em 2em;
+    margin-bottom: 1rem;
+    width: 90%;
+    font-family: "Raleway", sans-serif;
+
+    &--small {
+        font-size: 0.8rem;
+        width: 90%;
+    }
+}
+
+.btn {
+    background-color: $very-dark-blue;
+    color: $light-grayish-blue;
+    box-shadow: 4px 4px 0 rgba(128, 128, 128, 0.192);
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 1rem;
+    padding: 0.8em 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color ease-in-out 250ms;
+
+    &--small {
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+
+    &:hover {
+        background-color: $bright-blue;
+    }
+}
+
+.link {
+    text-decoration: none !important;
+    position: relative;
+    color: $moderate-cyan;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 163px;
+        height: 2px;
+        background-color: $moderate-cyan;
+        margin-top: 0.2rem;
+    }
+}
+
+.arrow {
+    position: absolute;
+    top: 2px;
+    display: inline-block;
+}
+
+.icon {
+    margin-top: 0.8rem;
+}
+@media all and (min-width: 400px) {
+    .email-input {
+        width: 97%;
+    }
+}
+
+@media all and (min-width: 436px) {
+    .nav__link {
+        margin: 0 1rem;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .grid-col-two-responsive {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+
+    .grid-col-three-responsive {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-align-col-one-responsive {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .grid-align-col-two {
+        grid-column: 2 / 3;
+    }
+
+    .nav {
+        margin: 2em 9.5em;
+    }
+
+    .wrapper__title-responsive {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        margin: 2rem 0;
+    }
+
+    .align-left-responsive {
+        text-align: left;
+    }
+
+    .btn {
+        width: 300px;
+    }
+
+    .email-input-responsive {
+        width: 50%;
+    }
+}
